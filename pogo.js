@@ -32,12 +32,12 @@ for (let i = 0; i < acc.length; i++) {
         })
         .then(()=>{
           if (a[5]) {pickTrainerName(client, a)}
-        }).catch(err => {console.error("Failed to mark tutorial as complete... ERROR:", err);});
-      }).catch(err => {console.error("Failed to complete the tutorial... ERROR:", err);});
+        }).catch(err => {console.error(`Failed to mark tutorial as complete for ${a[1]}... ERROR:`, err);});
+      }).catch(err => {console.error(`Failed to complete the tutorial for ${a[1]}... ERROR:`, err);});
     }, timeOut);
   })
   .catch(err => {
-    console.error("Failed to initialize client... ERROR:", err);
+    console.error(`Failed to initialize client for ${a[1]}... ERROR:`, err);
   });
 }
 
