@@ -45,7 +45,7 @@ function pickTrainerName (client, a) {
   a[5] = a[5].replace(/\r/g, '');
   if (a[5].length > 12) {
     console.log(`Seems like ${a[5]} is too long name... (PROTIP: It can't exceed 12 characters!) Run this to try different name!:
-node name.js -a ${a[0]} -u ${a[1]} -p ${a[2]} -l ${a[3]},${a[4]} -u TRAINER-NAME`); 
+node name.js -a ${a[0]} -u ${a[1]} -p ${a[2]} -l ${a[3]},${a[4]} -n TRAINER-NAME`); 
   }
   new Promise(resolve=>{
     resolve(client.checkCodenameAvailable(a[5]));
